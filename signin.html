@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Portal - Sign In</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/CSS/signin.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <i class="bi bi-shield-lock-fill" style="font-size: 3rem; color: #7B3AED;"></i>
+                <h3>Agent Portal</h3>
+                <p>Access your exclusive content management</p>
+            </div>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Login</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab">Sign Up</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Login Form -->
+                <div class="tab-pane fade show active" id="login" role="tabpanel">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                        </div>
+                        <button type="submit" class="btn btn-auth">Login to Portal</button>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="tab-pane fade" id="signup" role="tabpanel">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                            <div class="invalid-feedback">Please enter your full name.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Gmail Address">
+                            <div class="invalid-feedback">Please enter a valid Gmail address.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            <div class="invalid-feedback">Please enter a valid phone number.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="experience" placeholder="Experience Level (e.g., 2 years in content creation)">
+                            <div class="invalid-feedback">Please enter your experience level.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+                            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                            <div class="invalid-feedback">Passwords do not match.</div>
+                        </div>
+                        <button type="submit" class="btn btn-auth">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="activate-windows">
+            Go to Settings to activate Windows.
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/JavaScript/signin.js"></script>
+</body>
+</html>
