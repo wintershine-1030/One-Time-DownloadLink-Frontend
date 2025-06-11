@@ -21,73 +21,68 @@
                 <p>Access your exclusive content management</p>
             </div>
 
-            <ul class="nav nav-tabs" role="tablist">
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills nav-justified mb-4" id="authTabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Login</button>
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab">Sign Up</button>
+                    <button class="nav-link" id="signup-tab" data-bs-toggle="pill" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="false">Sign Up</button>
                 </li>
             </ul>
 
+            <!-- Tab panes -->
             <div class="tab-content">
                 <!-- Login Form -->
-                <div class="tab-pane fade show active" id="login" role="tabpanel">
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                     <form id="loginForm">
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="loginEmail" placeholder="Email">
-                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="agent@gmail.com">
                         </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
-                            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
                         </div>
-                        <button type="submit" class="btn btn-auth">Login to Portal</button>
+                        <button type="submit" class="btn btn-primary w-100">Login to Portal</button>
                     </form>
                 </div>
 
                 <!-- Sign Up Form -->
-                <div class="tab-pane fade" id="signup" role="tabpanel">
+                <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
                     <form id="signupForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="fullName" placeholder="Full Name">
-                            <div class="invalid-feedback">Please enter your full name.</div>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="signupEmail" placeholder="Gmail Address">
-                            <div class="invalid-feedback">Please enter a valid Gmail address.</div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Gmail Address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter your Gmail address">
                         </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
-                            <div class="invalid-feedback">Please enter a valid phone number.</div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="experience" placeholder="Experience Level (e.g., 2 years in content creation)">
-                            <div class="invalid-feedback">Please enter your experience level.</div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label">Experience Level</label>
+                            <input type="text" class="form-control" id="experience" placeholder="e.g., 2 years in content creation">
                         </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
-                            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Create a password">
                         </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                            <div class="invalid-feedback">Passwords do not match.</div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
                         </div>
-                        <button type="submit" class="btn btn-auth">Create Account</button>
+                        <button type="submit" class="btn btn-primary w-100">Create Account</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="activate-windows">
-            Go to Settings to activate Windows.
-        </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="assets/JavaScript/signin.js"></script>
 </body>
 </html>

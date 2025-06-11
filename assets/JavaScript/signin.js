@@ -1,38 +1,41 @@
 $(document).ready(function() {
-    // Toggle between login and signup forms
-    $('.nav-tabs .nav-link').on('click', function(e) {
-        e.preventDefault();
-        $(this).tab('show');
+    // Tab and form switching
+    $('.tab-btn').click(function() {
+        const formId = $(this).data('form');
+        
+        // Update tab buttons
+        $('.tab-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        // Show corresponding form
+        $('.auth-form').removeClass('active');
+        $(`#${formId}Form`).addClass('active');
     });
 
-    // Form validation for login
-    $('#loginForm').on('submit', function(e) {
+    // Login form submission
+    $('#loginForm').submit(function(e) {
         e.preventDefault();
-        let isValid = true;
+        const email = $(this).find('input[type="email"]').val();
+        const password = $(this).find('input[type="password"]').val();
         
-        const email = $('#loginEmail').val();
-        const password = $('#loginPassword').val();
+        // Here you would typically make an API call to your backend
+        console.log('Login attempt:', { email, password });
+    });
 
-        // Simple email validation
-        if (!email || !/\S+@\S+\.\S+/.test(email)) {
-            $('#loginEmail').addClass('is-invalid');
-            isValid = false;
-        } else {
-            $('#loginEmail').removeClass('is-invalid');
-        }
-
-        // Password validation
-        if (!password || password.length < 6) {
-            $('#loginPassword').addClass('is-invalid');
-            isValid = false;
-        } else {
-            $('#loginPassword').removeClass('is-invalid');
-        }
-
-        if (isValid) {
-            // Here you would typically make an API call to your backend
-            console.log('Login form submitted:', { email, password });
-        }
+    // Signup form submission
+    $('#signupForm').submit(function(e) {
+        e.preventDefault();
+        const formData = {
+            fullName: $(this).find('input[type="text"]').first().val(),
+            email: $(this).find('input[type="email"]').val(),
+            phone: $(this).find('input[type="tel"]').val(),
+            experience: $(this).find('input[type="text"]').eq(1).val(),
+            password: $(this).find('input[type="password"]').first().val(),
+            confirmPassword: $(this).find('input[type="password"]').last().val()
+        };
+        
+        // Here you would typically make an API call to your backend
+        console.log('Signup attempt:', formData);
     });
 
     // Form validation for signup
