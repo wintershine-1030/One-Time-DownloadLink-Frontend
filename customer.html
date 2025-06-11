@@ -38,137 +38,269 @@
 
     <!-- Navigation -->
     <div class="nav-container">
-        <div class="container-fluid">
-            <div class="nav-tabs">
-                <button class="nav-tab active">
-                    <span>Models</span>
-                </button>
-                <button class="nav-tab">
-                    <span>Content</span>
-                </button>
-                <button class="nav-tab">
-                    <span>Payment Links</span>
-                    <span class="status-badge small">Ready</span>
-                </button>
-                <button class="nav-tab">
-                    <span>Analytics</span>
-                </button>
-            </div>
+        <div class="container-fluid" style="max-width: 800px; margin: 0 auto;">
+            <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-tab active" id="models-tab" data-bs-toggle="tab" data-bs-target="#models-content" type="button" role="tab">Models</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-tab" id="content-tab" data-bs-toggle="tab" data-bs-target="#content-content" type="button" role="tab">Content</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-tab" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment-content" type="button" role="tab">
+                        Payment Links
+                        <span class="status-badge small">Ready</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-tab" id="analytics-tab" data-bs-toggle="tab" data-bs-target="#analytics-content" type="button" role="tab">Analytics</button>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
         <div class="container-fluid">
-            <!-- Header -->
-            <div class="content-header">
-                <h2>Your Models</h2>
-                <span class="models-count">2 Active</span>
-            </div>
-
-            <!-- Model Cards -->
-            <div class="model-grid">
-                <!-- Model Card 1 -->
-                <div class="model-card">
-                    <div class="model-image">
-                        <img src="assets/images/model1.jpg" alt="Sophia Elite">
-                        <span class="status-badge">Approved</span>
+            <div class="tab-content" id="mainTabContent">
+                <!-- Models Tab -->
+                <div class="tab-pane fade show active" id="models-content" role="tabpanel" aria-labelledby="models-tab">
+                    <div class="content-header">
+                        <h2>Your Models</h2>
+                        <span class="models-count">2 Active</span>
                     </div>
-                    <div class="model-info">
-                        <div class="model-header">
-                            <h3>Sophia Elite</h3>
-                            <i class="bi bi-crown"></i>
-                        </div>
-                        <div class="model-category">
-                            <span>Category:</span>
-                            <span class="badge-premium">PREMIUM</span>
-                        </div>
-                        <div class="model-stats">
-                            <div class="stat">
-                                <div class="stat-value">$8,450</div>
-                                <div class="stat-label">EARNINGS</div>
+
+                    <div class="model-grid">
+                        <!-- Model Card 1 -->
+                        <div class="model-card">
+                            <div class="model-image">
+                                <img src="assets/images/model1.jpg" alt="Sophia Elite">
+                                <span class="status-badge">Approved</span>
                             </div>
-                            <div class="stat">
-                                <div class="stat-value">45</div>
-                                <div class="stat-label">CONTENT</div>
+                            <div class="model-info">
+                                <div class="model-header">
+                                    <h3>Sophia Elite</h3>
+                                    <i class="bi bi-crown"></i>
+                                </div>
+                                <div class="model-category">
+                                    <span>Category:</span>
+                                    <span class="badge-premium">PREMIUM</span>
+                                </div>
+                                <div class="model-stats">
+                                    <div class="stat">
+                                        <div class="stat-value">$8,450</div>
+                                        <div class="stat-label">EARNINGS</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">45</div>
+                                        <div class="stat-label">CONTENT</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-selected">SELECTED</button>
                             </div>
                         </div>
-                        <button class="btn btn-selected">SELECTED</button>
+
+                        <!-- Model Card 2 -->
+                        <div class="model-card">
+                            <div class="model-image">
+                                <img src="assets/images/model2.jpg" alt="Luna Luxe">
+                                <span class="status-badge">Approved</span>
+                            </div>
+                            <div class="model-info">
+                                <div class="model-header">
+                                    <h3>Luna Luxe</h3>
+                                    <i class="bi bi-crown"></i>
+                                </div>
+                                <div class="model-category">
+                                    <span>Category:</span>
+                                    <span class="badge-vip">VIP</span>
+                                </div>
+                                <div class="model-stats">
+                                    <div class="stat">
+                                        <div class="stat-value">$12,200</div>
+                                        <div class="stat-label">EARNINGS</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">67</div>
+                                        <div class="stat-label">CONTENT</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-select">SELECT MODEL</button>
+                            </div>
+                        </div>
+
+                        <!-- Model Card 3 -->
+                        <div class="model-card disabled">
+                            <div class="model-image">
+                                <img src="assets/images/model3.jpg" alt="Aria Divine">
+                                <span class="status-badge pending">Pending</span>
+                            </div>
+                            <div class="model-info">
+                                <div class="model-header">
+                                    <h3>Aria Divine</h3>
+                                    <i class="bi bi-crown"></i>
+                                </div>
+                                <div class="model-category">
+                                    <span>Category:</span>
+                                    <span class="badge-premium">PREMIUM</span>
+                                </div>
+                                <div class="model-stats">
+                                    <div class="stat">
+                                        <div class="stat-value">$0</div>
+                                        <div class="stat-label">EARNINGS</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">0</div>
+                                        <div class="stat-label">CONTENT</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-pending" disabled>AWAITING APPROVAL</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selected-details">
+                        <h4>Selected Model Details</h4>
+                        <p>You've selected Sophia Elite. You can now manage content and generate payment links for this model.</p>
                     </div>
                 </div>
 
-                <!-- Model Card 2 -->
-                <div class="model-card">
-                    <div class="model-image">
-                        <img src="assets/images/model2.jpg" alt="Luna Luxe">
-                        <span class="status-badge">Approved</span>
+                <!-- Content Tab -->
+                <div class="tab-pane fade" id="content-content" role="tabpanel" aria-labelledby="content-tab">
+                    <h2 class="content-title">Content Selection</h2>
+
+                    <!-- Content Type Tabs -->
+                    <div class="content-type-nav">
+                        <button class="content-type-link active" data-bs-toggle="tab" data-bs-target="#photos-content">
+                            <i class="bi bi-images"></i>
+                            Photo Sets
+                        </button>
+                        <button class="content-type-link" data-bs-toggle="tab" data-bs-target="#videos-content">
+                            <i class="bi bi-camera-video"></i>
+                            Videos
+                        </button>
                     </div>
-                    <div class="model-info">
-                        <div class="model-header">
-                            <h3>Luna Luxe</h3>
-                            <i class="bi bi-crown"></i>
-                        </div>
-                        <div class="model-category">
-                            <span>Category:</span>
-                            <span class="badge-vip">VIP</span>
-                        </div>
-                        <div class="model-stats">
-                            <div class="stat">
-                                <div class="stat-value">$12,200</div>
-                                <div class="stat-label">EARNINGS</div>
+
+                    <div class="tab-content" id="contentTypeTabContent">
+                        <div class="tab-pane fade show active" id="photos-content" role="tabpanel">
+                            <div class="content-grid">
+                                <!-- Photo Set 1 -->
+                                <div class="content-card">
+                                    <div class="content-image">
+                                        <i class="bi bi-image"></i>
+                                    </div>
+                                    <div class="content-info">
+                                        <div class="content-header">
+                                            <h3>Photo Set 1</h3>
+                                            <span class="badge badge-premium">Premium</span>
+                                        </div>
+                                        <div class="content-price">$25</div>
+                                    </div>
+                                </div>
+
+                                <!-- Photo Set 2 -->
+                                <div class="content-card">
+                                    <div class="content-image">
+                                        <i class="bi bi-image"></i>
+                                    </div>
+                                    <div class="content-info">
+                                        <div class="content-header">
+                                            <h3>Photo Set 2</h3>
+                                            <span class="badge badge-vip">VIP</span>
+                                        </div>
+                                        <div class="content-price">$35</div>
+                                    </div>
+                                </div>
+
+                                <!-- Photo Set 3 -->
+                                <div class="content-card">
+                                    <div class="content-image">
+                                        <i class="bi bi-image"></i>
+                                    </div>
+                                    <div class="content-info">
+                                        <div class="content-header">
+                                            <h3>Photo Set 3</h3>
+                                            <span class="badge badge-standard">Standard</span>
+                                        </div>
+                                        <div class="content-price">$20</div>
+                                    </div>
+                                </div>
+
+                                <!-- Add New Content Card -->
+                                <div class="content-card empty">
+                                    <div class="content-image">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Add New Content</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <div class="stat-value">67</div>
-                                <div class="stat-label">CONTENT</div>
-                            </div>
                         </div>
-                        <button class="btn btn-select">SELECT MODEL</button>
+
+                        <div class="tab-pane fade" id="videos-content" role="tabpanel">
+                            <!-- Videos content here -->
+                        </div>
                     </div>
                 </div>
 
-                <!-- Model Card 3 -->
-                <div class="model-card disabled">
-                    <div class="model-image">
-                        <img src="assets/images/model3.jpg" alt="Aria Divine">
-                        <span class="status-badge pending">Pending</span>
-                    </div>
-                    <div class="model-info">
-                        <div class="model-header">
-                            <h3>Aria Divine</h3>
-                            <i class="bi bi-crown"></i>
-                        </div>
-                        <div class="model-category">
-                            <span>Category:</span>
-                            <span class="badge-premium">PREMIUM</span>
-                        </div>
-                        <div class="model-stats">
-                            <div class="stat">
-                                <div class="stat-value">$0</div>
-                                <div class="stat-label">EARNINGS</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">0</div>
-                                <div class="stat-label">CONTENT</div>
-                            </div>
-                        </div>
-                        <button class="btn btn-pending" disabled>AWAITING APPROVAL</button>
-                    </div>
+                <!-- Payment Links Tab -->
+                <div class="tab-pane fade" id="payment-content" role="tabpanel" aria-labelledby="payment-tab">
+                    <!-- Payment Links content here -->
                 </div>
-            </div>
 
-            <!-- Selected Model Details -->
-            <div class="selected-details">
-                <h4>Selected Model Details</h4>
-                <p>You've selected Sophia Elite. You can now manage content and generate payment links for this model.</p>
+                <!-- Analytics Tab -->
+                <div class="tab-pane fade" id="analytics-content" role="tabpanel" aria-labelledby="analytics-tab">
+                    <!-- Analytics content here -->
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- jQuery -->
+    <!-- Scripts at the end of body -->
+    <!-- jQuery first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap Bundle with Popper -->
+    <!-- Then Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="assets/JavaScript/customer.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize main tabs
+            $('#mainTabs .nav-tab').on('click', function(e) {
+                e.preventDefault();
+                $('#mainTabs .nav-tab').removeClass('active');
+                $('#mainTabContent .tab-pane').removeClass('show active');
+                
+                $(this).addClass('active');
+                const target = $(this).data('bs-target');
+                $(target).addClass('show active');
+
+                // If clicking on Content tab, ensure Photo Sets is shown by default
+                if (target === '#content-content') {
+                    $('.content-type-link').removeClass('active');
+                    $('.content-type-link[data-bs-target="#photos-content"]').addClass('active');
+                    $('#photos-content').addClass('show active');
+                }
+            });
+
+            // Initialize Photo Sets / Videos tabs
+            $('.content-type-link').on('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all content type links
+                $('.content-type-link').removeClass('active');
+                // Add active class to clicked link
+                $(this).addClass('active');
+                
+                // Hide all content panes
+                $('#contentTypeTabContent .tab-pane').removeClass('show active');
+                // Show the target content pane
+                const target = $(this).data('bs-target');
+                $(target).addClass('show active');
+            });
+
+            // Ensure first tabs are active by default
+            $('#models-content').addClass('show active');
+            $('#photos-content').addClass('show active');
+        });
+    </script>
 </body>
 </html>

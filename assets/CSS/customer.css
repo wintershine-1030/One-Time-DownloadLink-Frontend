@@ -85,7 +85,6 @@ body {
 /* Navigation Styles */
 .nav-container {
     background: var(--nav-bg);
-    padding: 0.5rem;
     backdrop-filter: blur(10px);
 }
 
@@ -93,9 +92,18 @@ body {
     border-bottom-width: 0px;
     display: flex;
     align-items: center;
+    background: rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     margin: 0;
+    padding: 4px;
     width: 100%;
+    gap: 4px;
+}
+
+.nav-item {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
 }
 
 .nav-tab {
@@ -115,6 +123,7 @@ body {
     transition: all 0.2s ease;
     border-radius: 6px;
     min-height: 36px;
+    white-space: nowrap;
 }
 
 .nav-tab:hover:not(.active) {
@@ -379,4 +388,183 @@ body {
 .btn-icon,
 .btn-logout {
     display: none;
+}
+
+/* Tab Content Visibility */
+.tab-content {
+    display: block;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.show.active {
+    display: block;
+}
+
+/* Tab Content Transitions */
+.tab-pane {
+    transition: opacity 0.15s linear;
+}
+
+.tab-pane.fade {
+    opacity: 0;
+}
+
+.tab-pane.fade.show {
+    opacity: 1;
+}
+
+/* Content Section Styles */
+.content-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Content Type Navigation */
+.content-type-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.content-type-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.content-type-link i {
+    font-size: 1.125rem;
+}
+
+.content-type-link:hover:not(.active) {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.content-type-link.active {
+    background: #9333EA;
+    color: #fff;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.content-card {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.content-card:not(.empty):hover {
+    transform: translateY(-4px);
+}
+
+.content-image {
+    aspect-ratio: 16/9;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-image i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.content-info {
+    padding: 1rem;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.content-header h3 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.content-price {
+    color: #10B981;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-premium {
+    background: rgba(147, 51, 234, 0.2);
+    color: #9333EA;
+}
+
+.badge-vip {
+    background: rgba(79, 70, 229, 0.2);
+    color: #4F46E5;
+}
+
+.badge-standard {
+    background: rgba(107, 114, 128, 0.2);
+    color: #6B7280;
+}
+
+/* Empty Card */
+.content-card.empty {
+    background: rgba(0, 0, 0, 0.15);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.content-card.empty:hover {
+    background: rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.content-card.empty .content-image {
+    background: transparent;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.content-card.empty .content-image i {
+    font-size: 1.5rem;
+}
+
+.content-card.empty .content-image span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
 }
