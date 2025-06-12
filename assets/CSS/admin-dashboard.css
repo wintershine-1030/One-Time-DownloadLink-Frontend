@@ -1,0 +1,166 @@
+/* Admin Dashboard Custom Styles */
+.dashboard-card {
+    background: rgba(30, 30, 45, 0.7);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+}
+.dashboard-card .icon {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.dashboard-card .count {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.dashboard-card .label {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+}
+.tab-btn {
+    border: none;
+    background: none;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+}
+.tab-btn.active {
+    background: #3B82F6;
+    color: #fff;
+}
+.tab-btn:hover:not(.active) {
+    color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.05);
+}
+.pending-card {
+    background: rgba(30, 30, 45, 0.7);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+.pending-card h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.agent-info-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.agent-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.agent-email {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+.agent-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+.detail-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.detail-value {
+    font-size: 0.875rem;
+    color: #fff;
+}
+.applied-time {
+    color: #fbbf24 !important;
+}
+.status-badge {
+    background: #fbbf24;
+    color: #1a1a2e;
+    font-size: 0.75rem;
+    border-radius: 1rem;
+    padding: 0.375rem 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.actions-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.actions-row .btn {
+    flex: none;
+    width: auto;
+}
+.model-select {
+    flex: 1;
+    min-width: 250px;
+}
+.btn-approve {
+    background: #10B981;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+.btn-approve:hover {
+    background: #059669;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+.btn-reject {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+.btn-reject:hover {
+    background: #dc2626;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+/* Custom logout button styling */
+.icon-button i {
+    font-size: 1.5rem;
+}
+@media (max-width: 900px) {
+    .dashboard-cards {
+        flex-direction: column;
+        gap: 1rem;
+    }
+} 

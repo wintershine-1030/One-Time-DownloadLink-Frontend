@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/CSS/customer.css" rel="stylesheet">
+    <link href="assets/CSS/admin.css" rel="stylesheet">
+    <link href="assets/CSS/admin-dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid px-4 py-3" style="min-height:100vh;">
+        <!-- Header -->
+        <div class="d-flex align-items-center justify-content-between mb-3 position-relative">
+            <div>
+                <h1 class="fw-bold mb-1" style="color:#fff;font-size:1.5rem;"> <i class="bi bi-shield-lock me-2"></i>Admin Dashboard</h1>
+                <div style="color:rgba(255,255,255,0.7);font-size:0.875rem;">Manage agents, models, payments, and content</div>
+            </div>
+            <button class="icon-button">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+        <!-- Dashboard Cards -->
+        <div class="dashboard-cards d-flex gap-4 mb-4 flex-wrap">
+            <div class="dashboard-card flex-fill">
+                <span class="icon"><i class="bi bi-person-plus"></i></span>
+                <div>
+                    <div class="count">2</div>
+                    <div class="label">Pending Agents</div>
+                </div>
+            </div>
+            <div class="dashboard-card flex-fill">
+                <span class="icon"><i class="bi bi-person-check"></i></span>
+                <div>
+                    <div class="count">1</div>
+                    <div class="label">Active Agents</div>
+                </div>
+            </div>
+            <div class="dashboard-card flex-fill">
+                <span class="icon"><i class="bi bi-clock-history"></i></span>
+                <div>
+                    <div class="count">1</div>
+                    <div class="label">Pending Payments</div>
+                </div>
+            </div>
+            <div class="dashboard-card flex-fill">
+                <span class="icon"><i class="bi bi-check2-circle"></i></span>
+                <div>
+                    <div class="count">2</div>
+                    <div class="label">Total Models</div>
+                </div>
+            </div>
+        </div>
+        <!-- Tabs -->
+        <div class="nav-container mb-4">
+            <div class="nav-tabs d-flex">
+                <button class="tab-btn active">Agent Management</button>
+                <button class="tab-btn">Model Management</button>
+                <button class="tab-btn">Payment Verification</button>
+                <button class="tab-btn">Content Management</button>
+            </div>
+        </div>
+        <!-- Pending Agent Applications -->
+        <div class="pending-card">
+            <h4>Pending Agent Applications</h4>
+            <div class="agent-info-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <div class="agent-name">Emma Johnson</div>
+                        <div class="agent-email">emma@gmail.com</div>
+                    </div>
+                    <span class="status-badge">Pending Review</span>
+                </div>
+                <div class="agent-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Phone</div>
+                        <div class="detail-value">+1234567890</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Applied</div>
+                        <div class="detail-value applied-time">2024-01-15 10:30</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Experience</div>
+                        <div class="detail-value">3 years in content creation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="detail-label mb-2">Assign Model</div>
+                <select class="form-control model-select">
+                    <option selected disabled>Select a model to assign</option>
+                    <option>Model 1</option>
+                    <option>Model 2</option>
+                    <option>Model 3</option>
+                </select>
+            </div>
+            <div class="actions-row">
+                <button class="btn btn-approve"><i class="bi bi-check-circle me-2"></i>Approve & Assign</button>
+                <button class="btn btn-reject"><i class="bi bi-x-circle me-2"></i>Reject</button>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/JavaScript/admin.js"></script>
+    <script src="assets/JavaScript/customer.js"></script>
+    <script>
+        // Tab switching logic
+        $(document).ready(function() {
+            $('.tab-btn').click(function() {
+                $('.tab-btn').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
